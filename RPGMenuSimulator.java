@@ -91,9 +91,19 @@ public class RPGMenuSimulator {
                 case 5:
                     System.out.println("\nEstado del personaje próximamente...");
                     if (personajeCreado) {
+                        
                         System.out.println("Nombre: " + nombre);
                         System.out.println("Clase: " + tipo);
-                        System.out.println("Vida: " + vida);
+                        if (vida < 20) {
+                            System.out.println("¡Cuidado! Tu vida es baja.");
+                            
+                        }else if (vida < 50) {
+                            System.out.println("Tu vida es moderada.");
+                        }else if (vida > 80) {
+                            System.out.println("¡Estás en excelente forma!");
+                        } else {
+                            System.out.println("Tu vida es estable.");
+                        }
                         System.out.println("Fuerza: " + fuerza);
                     } else {
                         System.out.println("No se ha creado un personaje aún...");
