@@ -120,8 +120,8 @@ java RPGMennuSimulator.java
 
 ## 💡 Integrantes
 
-- Renato Campos
-- Diego Castillo
-- Javiera Godoy
-- Victor Erazo
-- Matías Celis
+- Javiera Godoy (menú / creación del personaje)
+- Diego Castillo(inventario)
+- Renato Campos(entrenamiento)
+- Victor Erazo (batalla)
+- Matías Celis (readme)
