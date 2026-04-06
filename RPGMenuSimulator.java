@@ -12,6 +12,14 @@ public class RPGMenuSimulator {
         int fuerza = 0;
         boolean personajeCreado = false;
 
+        String[] inventario = {  // PARTE DEL INVENTARIO
+            "❤️ Poción Curativa",
+            "💧 Poción de Maná",
+            "⛏️ Hierro",
+            "📜 Pergamino",
+            "🗝️ Llave Antigua"
+        };
+
         do {
             System.out.println("\n=== RPG SIMULATOR ===");
             System.out.println("1. Crear personaje");
@@ -85,7 +93,27 @@ public class RPGMenuSimulator {
                     break;
 
                 case 4:
-                    System.out.println("\nInventario próximamente...");
+                    System.out.println("\n         ⢀⣀⣀⣀⣀⣀⣀⣀⣀⡀⡀             ");
+                    System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠉⠉⠉⠉⠉⠉⠉⠉⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ");
+                    System.out.println("⠀⠀⠀⠀⠀⣾⠀⣿⣿⡿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⢿⣿⣿⠀⢷⠀⠀⠀⠀⠀ ");
+                    System.out.println("⠀⠀⠀⠀⢰⡏⠀⣿⣿⠀⣴⣶⣶⣶⣶⣶⣶⣶⣶⣦⠀⣿⣿⡀⢸⡆⠀⠀⠀⠀ ");
+                    System.out.println("⠀⠀⠀⠀⢸⡇⠀⣿⣿⣆⠘⠻⠇⢠⣤⣤⡄⠸⠟⠋⣠⣿⣿⡇⢸⡇⠀⠀⠀⠀ ");
+                    System.out.println("⠀⠀⠀⠀⢸⣇⠀⣿⣿⣿⣿⣶⣆⣈⣉⣉⣁⣰⣶⣿⣿⣿⣿⠃⢸⡇⠀⠀⠀⠀ ");
+                    System.out.println("⠀⠀⠀⠀⠈⣿⣀⣉⣉⠉⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠉⣉⣉⣀⣿⠀⠀⠀⠀⠀ ");
+                    System.out.println("⢀⡴⠀⣉⣉⠉⠉⠉⠛⠛ INVENTARIO ⠛⠛⠉⠉⠉⣉⣉⠀⢦⡀⠀⠀");
+                    System.out.println("⠀⠀⠈⣀⠀⣿⣿⠀⣿⣿⠀⠛⠛⠉⠉⠉⠉⠛⠛⠀⣿⣿⠀⣿⣿⠀⣀⠁⠀⠀");
+
+                    for (String item : inventario) {
+                    System.out.println("║" + item);
+                    }
+
+                    System.out.println("⠀⠀⢸⡇⢀⣿⣿⠀⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⠀⣿⣿⠀⣿⣿⡀⢸⡇⠀⠀");
+                    System.out.println("⠀⠀⢸⡇⢸⣿⠀⣤⡤⢤⣄⠘⠻⠿⠿⠿⠿⠟⠃⣠⡤⢤⣤⠀⣿⡇⢸⡇⠀⠀");
+                    System.out.println("⠀⠀⢠⡄⢸⣿⠀⠛⠃⠘⠋⢸⣶⣶⣆⣰⣶⣶⡇⠙⠃⠘⠛⠀⣿⡇⢠⡄⠀⠀");
+                    System.out.println("⠀⠀⢠⡄⠸⣿⣿⠀⠷⠞⠀⠛⠛⠿⠿⠿⠿⠛⠛⠀⠳⠾⠀⣿⣿⠇⢠⡄⠀⠀");
+                    System.out.println("⠀⠀⠘⠗⠀⣿⣿⠀⣶⣶⠀⣿⣷⣶⣶⣶⣶⣾⣿⠀⣶⣶⠀⣿⣿⠀⠺⠃⠀⠀");
+                    System.out.println("⠀⠀⠀⠀⠀⠉⠉⠀⠉⠉⠀⠉⠉⠉⠉⠉⠉⠉⠉⠀⠉⠉⠀⠉⠉⠀⠀⠀⠀⠀");
+
                     break;
 
                 case 5:
