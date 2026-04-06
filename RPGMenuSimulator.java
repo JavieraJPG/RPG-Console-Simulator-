@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class RPGMenuSimulator {
@@ -8,9 +9,11 @@ public class RPGMenuSimulator {
 
         String nombre = "";
         String tipo = "";
-        int vida = 0;
+        int vida = 100;
+        int vidaEnemigo = 100;
         int fuerza = 0;
         boolean personajeCreado = false;
+        Random random = new Random();
 
         do {
             System.out.println("\n=== RPG SIMULATOR ===");
@@ -81,7 +84,41 @@ public class RPGMenuSimulator {
                     break;
 
                 case 3:
-                    System.out.println("\nBatalla próximamente...");
+                    System.out.println("\nBatalla");
+                    //BATALLA DE 5 TURNOS
+                    for (int turno = 1; turno <=5; turno++)
+                    System.out.println("Turno" + turno);
+
+                    //DAÑO ENTRE 10 Y 20
+                    int dañoJugador = random.nextInt(11) + 10;
+                    int dañoEnemigo = random.nextInt(11) + 10;
+
+                    //PARA RESTAR VIDA
+                    vidaEnemigo-= dañoJugador;
+                    vida-= dañoEnemigo;
+
+                    //PARA EVITAR VIDA NEGATIVA
+                    if (vidaEnemigo <= 0) vidaEnemigo = 0;
+                    if (vida <=0) vida = 0;
+
+                    //PARA MOSTRAR VIDA RESTANTE
+                    System.out.println("Vida del Jugador: " + vida);
+                    System.out.println("Vida del Enemigo" + vidaEnemigo);
+                    System.out.println("------------------------------");
+
+                    //SI ALGUNO MUERE ANTES DE LOS 5 TURNOS
+                    if (vida == 0 || vidaEnemigo == 0)
+                        System.out.println("LA BATALLA HA TERMINADO");
+
+                    //RESULTADO FINAL
+                    System.out.println("\n=========RESULTADO FINAL==========");
+                    if (vida > vidaEnemigo) {
+                        System.out.println("¡ENHORABUENA, HAS GANADO!");
+                    } else if (vida < vidaEnemigo) {
+                        System.out.println("HAS SIDO DERROTADO");
+                    } else {
+                        System.out.println("¡EMPATE!");
+                    }
                     break;
 
                 case 4:
