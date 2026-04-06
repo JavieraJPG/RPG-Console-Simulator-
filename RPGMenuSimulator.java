@@ -99,16 +99,21 @@ public class RPGMenuSimulator {
                             
                         }else if (vida < 50) {
                             System.out.println("Tu vida es moderada.");
+                            break;
                         }else if (vida > 80) {
                             System.out.println("¡Estás en excelente forma!");
+                            break;
                         } else {
                             System.out.println("Tu vida es estable.");
+                            break;
                         }
                         System.out.println("Fuerza: " + fuerza);
+                        break;
                     } else {
                         System.out.println("No se ha creado un personaje aún...");
+                        break;
                     }
-                    break;
+                    
 
                 case 6:
                     System.out.println("Saliendo del juego...");
